@@ -2,6 +2,14 @@
 
 Welcome to the docs of Superdate.js. A Node.js library that extends the main function of the Date javascript class.
 
+# Solution
+
+Some scenarios that could be achieved with Superdate.js:
+	- Every method that can be called in javascript builtin Date() class can also be called in Superdate.js.
+	- Optionally, developer can set workdays in order to perform further comparisons.
+	- It's possible to perform date comparisons.
+	- Different than javascript builtin Date() class, here you won't need to reinstance an object in order to compare dates. You could use the method setComparisonDate() and the retrieve it with getComparisonDate().
+	- This and much more is about to come.
 
 # Object Construction
 
@@ -41,7 +49,7 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 		- **Returns** - true if it's a work day and false if it's not.
 
 # Next improvements
-We will continuously add more functions to the package, but one of our main goals is swithing it to Typescript. So, if you like to collaborate, please check our pages: 
+We will continuously add more functions to the package, but one of our main goals is switching it to Typescript. So, if you like to collaborate, please check our pages: 
 
 - **Github Repository**:
 https://github.com/nholipau/superdate

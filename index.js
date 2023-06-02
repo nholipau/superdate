@@ -3,6 +3,7 @@ class superdate extends Date{
 
     weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     workdays = [];
+    compDate;
 
     setWorkDays(days){
         let wkd = days;
@@ -20,8 +21,8 @@ class superdate extends Date{
     }
 
     constructor(options){
-        if(options.date){
-            super(options.date);
+        if(options.mainDate){
+            super(options.mainDate);
         }
         else {
             super();
@@ -31,8 +32,23 @@ class superdate extends Date{
         }
     }
 
-    getWeekDay(){
-        let dayIndex = this.getDay();
+    setComparisonDate(date){
+        this.compDate = new Date(date);
+    }
+
+    getComparisonDate(){
+        return this.compDate;
+    }
+
+    getWeekDay(date){
+        let dayIndex;
+        if(typeof(date) != 'undefined'){
+            date = this.getComparisonDate();
+            dayIndex = date.getDay();
+        }
+        else {
+            dayIndex = this.getDay();
+        }
         if(dayIndex < 7 && dayIndex >= 0){
             return this.weekdays[dayIndex];
         }
@@ -54,7 +70,15 @@ class superdate extends Date{
     }
 
     isWorkDay(date){
-        if(this.getWorkDays().includes(this.getWeekDay())){
+        let weekday;
+        if(typeof(date) != 'undefined'){
+            date = this.getComparisonDate();
+            weekday = this.getWeekDay(date);
+        }
+        else {
+            weekday = this.getWeekDay();
+        }
+        if(this.getWorkDays().includes(weekday)){
             return true;
         }
         else {
