@@ -34,6 +34,7 @@ class superdate extends Date{
 
     setComparisonDate(date){
         this.compDate = new Date(date);
+        return true;
     }
 
     getComparisonDate(){

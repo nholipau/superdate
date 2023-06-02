@@ -5,11 +5,11 @@ Welcome to the docs of Superdate.js. A Node.js library that extends the main fun
 # Solution
 
 Some scenarios that could be achieved with Superdate.js:
-	- Every method that can be called in javascript builtin Date() class can also be called in Superdate.js.
-	- Optionally, developer can set workdays in order to perform further comparisons.
-	- It's possible to perform date comparisons.
-	- Different than javascript builtin Date() class, here you won't need to reinstance an object in order to compare dates. You could use the method setComparisonDate() and the retrieve it with getComparisonDate().
-	- This and much more is about to come.
+- Every method that can be called in javascript builtin Date() class can also be called in Superdate.js.
+- Optionally, developer can set workdays in order to perform further comparisons.
+- It's possible to perform date comparisons.
+- Different than javascript builtin Date() class, here you won't need to reinstance an object in order to compare dates. You could use the method setComparisonDate() and the retrieve it with getComparisonDate().
+- This and much more is about to come.
 
 # Object Construction
 
@@ -38,15 +38,18 @@ You can insert an object with following properties in the class construction:
 
 superdate objects inherit all the methods from Date javascript class. Plus, it has some extended methods that help the developer in implementations
 
-- ***getWeekDay()*** - It's a function to get the day of the week based on the date defined in the class construction.
-		- **Parameter** - none.
-		- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
+- ***setComparisonDate()*** - It's a function to escape from main date template and set a new one for comparisons.
+	- **Parameter** - It can be the same parameters of Date() constructor.
+	- **Returns** - true if succeeded.
+- ***getComparisonDate()*** - It's used to retrieve the date object seted in the function setComparisonDate() to perform comparisons.
+	- **Parameter** - none.
+	- **Returns** - A Date object as setted in function setComparisonDate().
 - ***getWorkDays()*** - It's a function to get all the workdays based on the date defined in the class construction.
-		- **Parameter** - none.
-		- **Returns** - An array with the days name e.g [Monday, Tuesday, Wednesday, Thursday, Friday].
+	- **Parameter** - none.
+	- **Returns** - An array with the days name e.g [Monday, Tuesday, Wednesday, Thursday, Friday].
 - ***isWorkDay()*** - It's a function to check whether a date is a work day, based on the atribute workdays defined in the class construction.
-		- **Parameter** - none.
-		- **Returns** - true if it's a work day and false if it's not.
+	- **Parameter** - none.
+	- **Returns** - true if it's a work day and false if it's not.
 
 # Next improvements
 We will continuously add more functions to the package, but one of our main goals is switching it to Typescript. So, if you like to collaborate, please check our pages: 
