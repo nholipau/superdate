@@ -41,14 +41,14 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 - ***setComparisonDate()*** - It's a function to escape from main date template and set a new one for comparisons.
 	- **Parameter** - It can be the same parameters of Date() constructor.
 	- **Returns** - true if succeeded.
-		<br>
-		**Example:**
+	<br>
+	**Example:**
 
-       const sd = new superdate({
-	       mainDate: '2023-06-02' // format should be the same as object Date from javascript
-       });
-       sd.setComparisonDate('2023-06-06');
-	<hr>
+	const sd = new superdate({
+		mainDate: '2023-06-02' // format should be the same as object Date from javascript
+	});
+	sd.setComparisonDate('2023-06-06');
+<hr>
 - ***getComparisonDate()*** - It's used to retrieve the date object seted in the function setComparisonDate() to perform comparisons.
 	- **Parameter** - none.
 	- **Returns** - A Date object as setted in function setComparisonDate().
