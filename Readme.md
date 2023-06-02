@@ -17,13 +17,13 @@ You can instance the object calling superdate class.
 Example:
 
     const superdate = require('superdate-js');
-	const d = new superdate();
+	const sd = new superdate();
 
 You can insert an object with following properties in the class construction:
 
 - **mainDate** - Defines the date to be considered (It has the same usage of the javascript Date class). If you omit it, the date considered will be current.
 
-       const d = new superdate({
+       const sd = new superdate({
 	       mainDate: '2023-06-02' // format should be the same as object Date from javascript
        });
 
