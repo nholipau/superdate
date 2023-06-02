@@ -48,7 +48,7 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 	- **Parameter** - none.
 	- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
 	<br>
-		**Example:**
+		Example:
 
        const sd = new superdate({
 	       mainDate: '2023-06-02' // format should be the same as object Date from javascript
