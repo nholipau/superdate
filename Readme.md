@@ -41,19 +41,31 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 - ***setComparisonDate()*** - It's a function to escape from main date template and set a new one for comparisons.
 	- **Parameter** - It can be the same parameters of Date() constructor.
 	- **Returns** - true if succeeded.
-- ***getComparisonDate()*** - It's used to retrieve the date object seted in the function setComparisonDate() to perform comparisons.
-	- **Parameter** - none.
-	- **Returns** - A Date object as setted in function setComparisonDate().
-- ***getWeekDay()*** - It's a function to get the day of the week based on the date defined in the class construction.
-	- **Parameter** - none.
-	- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
 	<br>
 		Example:
 
        const sd = new superdate({
 	       mainDate: '2023-06-02' // format should be the same as object Date from javascript
        });
+       sd.setComparisonDate('2023-06-06'); // Defines a different date to perform comparisons.
+	<hr>
+- ***getComparisonDate()*** - It's used to retrieve the date object seted in the function setComparisonDate() to perform comparisons.
+	- **Parameter** - none.
+	- **Returns** - A Date object as setted in function setComparisonDate().
+	<br>
+		Example:
+
+       const sd = new superdate({
+	       mainDate: '2023-06-02', // format should be the same as object Date from javascript
+		   workdays: [1,2,3,4,5] // Monday to Friday 
+       });
        sd.setComparisonDate('2023-06-06');
+	   sd.isWorkDay(sd.getComparisonDate()); // Return true since 06/06/2023 is Tuesday.
+	<hr>
+- ***getWeekDay()*** - It's a function to get the day of the week based on the date defined in the class construction.
+	- **Parameter** - none.
+	- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
+	<br>
 	<hr>
 - ***getLastDay()*** - Function that retrieves the last day of month based on user input.
 	- **Parameter** - Any date as the Date() call format.
