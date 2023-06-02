@@ -1,5 +1,5 @@
 
-class dateOptions extends Date{
+class superdate extends Date{
 
     weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     workdays = [];
