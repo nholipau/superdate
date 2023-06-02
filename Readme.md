@@ -35,3 +35,6 @@ dateOptions objects inherit all the methods from Date javascript class. Plus, it
 - **isWorkDay()** - It's a function to check whether a date is a work day, based on the atribute workdays defined in the class construction.
 		- **Parameter** - none.
 		- **Returns** - true if it's a work day and false if it's not.
+
+# Next improvements
+We will add more functions to the package, but one of our main goals is swithing it to Typescript. So, if you like to collaborate, please check our repo through the link https://github.com/nholipau/superdate
