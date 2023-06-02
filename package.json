@@ -1,6 +1,6 @@
 {
   "name": "superdate-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Node package that extends date builtin functions",
   "main": "index.js",
   "scripts": {
