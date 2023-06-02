@@ -66,16 +66,61 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 	- **Parameter** - none.
 	- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
 	<br>
+		Example:
+
+       const sd = new superdate({
+		   workdays: [3,4,5] // Wednesday to Friday 
+       });
+	   console.log(sd.getWeekDay()); // Returns a string with the weekday name. e.g. Friday
+	<hr>
+- ***getFirstDay()*** - Function that retrieves the first day of month based on user input.
+	- **Parameter** - Any date as the Date() call format.
+	- **Default** - If no parameter is setted, the date considered is the one in the construction of the class.
+	- **Returns** - A date Object.
+	<br>
+		Example:
+
+       const sd = new superdate({
+		   workdays: [3,4,5] // Wednesday to Friday 
+       });
+	   sd.setComparisonDate('2029-12-20');
+	   console.log(sd.getFirstDay(sd.getComparisonDate())); // Returns the first day of december/2029 - 2029-12-01
 	<hr>
 - ***getLastDay()*** - Function that retrieves the last day of month based on user input.
 	- **Parameter** - Any date as the Date() call format.
 	- **Returns** - A date Object.
+	<br>
+		Example:
+
+       const sd = new superdate({
+		   workdays: [3,4,5] // Wednesday to Friday 
+       });
+	   sd.setComparisonDate('2029-12-20');
+	   console.log(sd.getLastDay(sd.getComparisonDate())); // Returns the last day of december/2029 - 2029-12-31
+	<hr>
 - ***getWorkDays()*** - It's a function to get all the workdays based on the date defined in the class construction.
 	- **Parameter** - none.
 	- **Returns** - An array with the days name e.g [Monday, Tuesday, Wednesday, Thursday, Friday].
+	<br>
+		Example:
+
+       const sd = new superdate({
+		   workdays: [3,4,5] // Wednesday to Friday 
+       });
+	   console.log(sd.getWorkDays()); // Returns array ['Wednesday','Thursday','Friday'];
+	<hr>
 - ***isWorkDay()*** - It's a function to check whether a date is a work day, based on the atribute workdays defined in the class construction.
 	- **Parameter** - none.
 	- **Returns** - true if it's a work day and false if it's not.
+	<br>
+		Example:
+
+       const sd = new superdate({
+		   workdays: [3,4,5] // Wednesday to Friday 
+       });
+	   sd.setComparisonDate('2029-12-20');
+	   console.log(sd.isWorkDay(sd.getComparisonDate())); // Returns true, since it's a Wednesday
+	<hr>
 
 # Next improvements
 We will continuously add more functions to the package, but one of our main goals is switching it to Typescript. So, if you like to collaborate, please check our pages: 
