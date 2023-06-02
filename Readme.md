@@ -21,10 +21,10 @@ Example:
 
 You can insert an object with following properties in the class construction:
 
-- **date** - Defines the date to be considered (It has the same usage of the javascript Date class). If you omit it, the date considered will be current.
+- **mainDate** - Defines the date to be considered (It has the same usage of the javascript Date class). If you omit it, the date considered will be current.
 
        const d = new superdate({
-	       date: '2023-06-02' // format should be the same as object Date from javascript
+	       mainDate: '2023-06-02' // format should be the same as object Date from javascript
        });
 
 - **workdays** - Optionally, the developer can set the workdays to the date chosen. The value needs to be an array with the day code. (0 = Sunday, 1 = Monday, etc.. , 6 = Saturday).
