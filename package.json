@@ -1,7 +1,7 @@
 {
   "name": "superdate-js",
   "version": "1.0.1",
-  "description": "",
+  "description": "A Node package that extends date builtin functions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
