@@ -45,8 +45,8 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 	- **Parameter** - none.
 	- **Returns** - A Date object as setted in function setComparisonDate().
 - ***getWeekDay()*** - It's a function to get the day of the week based on the date defined in the class construction.
-		- **Parameter** - none.
-		- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
+	- **Parameter** - none.
+	- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
 		<br>
 		**Example:**
 
