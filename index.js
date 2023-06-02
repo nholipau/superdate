@@ -109,10 +109,4 @@ class superdate extends Date{
 
 }
 
-const sd = new superdate({
-    workdays: [3,4,5] // Wednesday to Friday 
-});
-sd.setComparisonDate('2029-12-20');
-console.log(sd.getWeekDay(sd.getComparisonDate()));
-
 module.exports = superdate;

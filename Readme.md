@@ -29,7 +29,7 @@ You can insert an object with following properties in the class construction:
 
 - **workdays** - Optionally, the developer can set the workdays to the date chosen. The value needs to be an array with the day code. (0 = Sunday, 1 = Monday, etc.. , 6 = Saturday).
 
-       const d = new superdate({
+       const sd = new superdate({
 	       mainDate: '2023-06-02',
 	       workdays: [1,2,3,4,5] // That from monday to saturday
        });
