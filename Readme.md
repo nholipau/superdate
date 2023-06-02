@@ -1,14 +1,15 @@
 # Superdate.js
 
-Hi! This is the first version of Superdate.js. A Node.js library that extends the main function of the Date javascript class.
+Welcome to the docs of Superdate.js. A Node.js library that extends the main function of the Date javascript class.
 
 
 # Object Construction
 
-You can instance the object calling dateOptions class.
+You can instance the object calling superdate class.
 Example:
 
-    const d = new superdate();
+    const superdate = require('superdate-js');
+	const d = new superdate();
 
 You can insert an object with following properties in the class construction:
 
@@ -27,14 +28,23 @@ You can insert an object with following properties in the class construction:
 
 ## Methods
 
-dateOptions objects inherit all the methods from Date javascript class. Plus, it has some extended methods that help the developer in implementations
+superdate objects inherit all the methods from Date javascript class. Plus, it has some extended methods that help the developer in implementations
 
 - ***getWeekDay()*** - It's a function to get the day of the week based on the date defined in the class construction.
 		- **Parameter** - none.
 		- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
-- **isWorkDay()** - It's a function to check whether a date is a work day, based on the atribute workdays defined in the class construction.
+- ***getWorkDays()*** - It's a function to get all the workdays based on the date defined in the class construction.
+		- **Parameter** - none.
+		- **Returns** - An array with the days name e.g [Monday, Tuesday, Wednesday, Thursday, Friday].
+- ***isWorkDay()*** - It's a function to check whether a date is a work day, based on the atribute workdays defined in the class construction.
 		- **Parameter** - none.
 		- **Returns** - true if it's a work day and false if it's not.
 
 # Next improvements
-We will add more functions to the package, but one of our main goals is swithing it to Typescript. So, if you like to collaborate, please check our repo through the link https://github.com/nholipau/superdate
+We will continuously add more functions to the package, but one of our main goals is swithing it to Typescript. So, if you like to collaborate, please check our pages: 
+
+- **Github Repository**:
+https://github.com/nholipau/superdate
+
+- **NPM Package**:
+https://www.npmjs.com/package/superdate-js

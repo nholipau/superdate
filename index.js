@@ -4,10 +4,6 @@ class superdate extends Date{
     weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     workdays = [];
 
-    getLastDay(date){
-        // Still to be implemented
-    }
-
     setWorkDays(days){
         let wkd = days;
         if(Array.isArray(wkd)){
@@ -57,7 +53,7 @@ class superdate extends Date{
         }
     }
 
-    isWorkDay(){
+    isWorkDay(date){
         if(this.getWorkDays().includes(this.getWeekDay())){
             return true;
         }
