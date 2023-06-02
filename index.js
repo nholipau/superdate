@@ -41,10 +41,31 @@ class superdate extends Date{
         return this.compDate;
     }
 
+    getFirstDay(date){
+        let newDate;
+        if(typeof(date) != 'undefined'){
+            newDate = new Date(date);
+            return new Date(newDate.getFullYear(), newDate.getMonth(), 1);
+        }
+        else {
+            return new Date(this.getFullYear(), this.getMonth(), 1);
+        }
+    }
+
+    getLastDay(date){
+        let newDate;
+        if(typeof(date) != 'undefined'){
+            newDate = new Date(date);
+            return new Date(newDate.getFullYear(), newDate.getMonth() + 1, 0);
+        }
+        else {
+            return new Date(this.getFullYear(), this.getMonth() + 1, 0);
+        }
+    }
+
     getWeekDay(date){
         let dayIndex;
         if(typeof(date) != 'undefined'){
-            date = this.getComparisonDate();
             dayIndex = date.getDay();
         }
         else {
@@ -73,7 +94,6 @@ class superdate extends Date{
     isWorkDay(date){
         let weekday;
         if(typeof(date) != 'undefined'){
-            date = this.getComparisonDate();
             weekday = this.getWeekDay(date);
         }
         else {
@@ -89,4 +109,12 @@ class superdate extends Date{
 
 }
 
-module.exports = superdate
+const sd = new superdate({
+
+});
+
+sd.setComparisonDate('2024-04-22');
+
+console.log(sd.getFirstDay(sd.getComparisonDate()));
+
+module.exports = superdate;

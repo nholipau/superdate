@@ -30,7 +30,7 @@ You can insert an object with following properties in the class construction:
 - **workdays** - Optionally, the developer can set the workdays to the date chosen. The value needs to be an array with the day code. (0 = Sunday, 1 = Monday, etc.. , 6 = Saturday).
 
        const d = new superdate({
-	       date: '2023-06-02',
+	       mainDate: '2023-06-02',
 	       workdays: [1,2,3,4,5] // That from monday to saturday
        });
 
@@ -41,9 +41,21 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 - ***setComparisonDate()*** - It's a function to escape from main date template and set a new one for comparisons.
 	- **Parameter** - It can be the same parameters of Date() constructor.
 	- **Returns** - true if succeeded.
+	- Example:
+		const sd = new superdate({
+	       mainDate: '2023-06-02',
+	       workdays: [1,2,3,4,5] // That from monday to saturday
+		});
+		sd.setComparisonDate('2023-06-05');
 - ***getComparisonDate()*** - It's used to retrieve the date object seted in the function setComparisonDate() to perform comparisons.
 	- **Parameter** - none.
 	- **Returns** - A Date object as setted in function setComparisonDate().
+- ***getFirstDay()*** - Function that retrieves the first day of month based on user input.
+	- **Parameter** - Any date as the Date() call format.
+	- **Returns** - A date Object.
+- ***getLastDay()*** - Function that retrieves the last day of month based on user input.
+	- **Parameter** - Any date as the Date() call format.
+	- **Returns** - A date Object.
 - ***getWorkDays()*** - It's a function to get all the workdays based on the date defined in the class construction.
 	- **Parameter** - none.
 	- **Returns** - An array with the days name e.g [Monday, Tuesday, Wednesday, Thursday, Friday].
