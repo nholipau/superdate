@@ -67,3 +67,5 @@ class superdate extends Date{
     }
 
 }
+
+module.exports = superdate
