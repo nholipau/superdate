@@ -43,10 +43,10 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 	- **Returns** - true if succeeded.
 	<br>
 	**Example:**
-		const sd = new superdate({
-			mainDate: '2023-06-02' // format should be the same as object Date from javascript
-		});
-		sd.setComparisonDate('2023-06-06');
+	const sd = new superdate({
+		mainDate: '2023-06-02' // format should be the same as object Date from javascript
+	});
+	sd.setComparisonDate('2023-06-06');
 	<hr>
 - ***getComparisonDate()*** - It's used to retrieve the date object seted in the function setComparisonDate() to perform comparisons.
 	- **Parameter** - none.
