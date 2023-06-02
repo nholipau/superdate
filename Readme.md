@@ -41,6 +41,12 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
 - ***setComparisonDate()*** - It's a function to escape from main date template and set a new one for comparisons.
 	- **Parameter** - It can be the same parameters of Date() constructor.
 	- **Returns** - true if succeeded.
+- ***getComparisonDate()*** - It's used to retrieve the date object seted in the function setComparisonDate() to perform comparisons.
+	- **Parameter** - none.
+	- **Returns** - A Date object as setted in function setComparisonDate().
+- ***getWeekDay()*** - It's a function to get the day of the week based on the date defined in the class construction.
+		- **Parameter** - none.
+		- **Returns** - The name of the day of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday).
 		<br>
 		**Example:**
 
@@ -49,12 +55,6 @@ superdate objects inherit all the methods from Date javascript class. Plus, it h
        });
        sd.setComparisonDate('2023-06-06');
 	<hr>
-- ***getComparisonDate()*** - It's used to retrieve the date object seted in the function setComparisonDate() to perform comparisons.
-	- **Parameter** - none.
-	- **Returns** - A Date object as setted in function setComparisonDate().
-- ***getFirstDay()*** - Function that retrieves the first day of month based on user input.
-	- **Parameter** - Any date as the Date() call format.
-	- **Returns** - A date Object.
 - ***getLastDay()*** - Function that retrieves the last day of month based on user input.
 	- **Parameter** - Any date as the Date() call format.
 	- **Returns** - A date Object.
